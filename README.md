@@ -1,1 +1,1 @@
-# social-media-mern-stack
+# socialmedia-mern-stack
