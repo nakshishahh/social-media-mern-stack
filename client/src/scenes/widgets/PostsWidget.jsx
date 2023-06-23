@@ -39,6 +39,9 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   return (
     <>
+   
+      {
+      console.log(posts)}
       {posts.map(
         ({
           _id,
@@ -51,11 +54,13 @@ const PostsWidget = ({ userId, isProfile = false }) => {
           userPicturePath,
           likes,
           comments,
-        }) => (
-          <PostWidget
+        }) => {
+          console.log({check:firstName})
+          return <PostWidget
             key={_id}
             postId={_id}
             postUserId={userId}
+            
             name={`${firstName} ${lastName}`}
             description={description}
             location={location}
@@ -64,7 +69,9 @@ const PostsWidget = ({ userId, isProfile = false }) => {
             likes={likes}
             comments={comments}
           />
-        )
+          
+        
+        }
       )}
     </>
   );
